@@ -1,6 +1,14 @@
+import { useEffect } from "react";
 import { Container } from "./styles";
+import { api } from './../../services/api';
 
 export function TransactionsTable(){
+  useEffect(()=>{
+    api.get('/transactions')
+      //.then(response => response.json()) // utilizando axios não precisa mais fazer essa conversao
+      .then(Response => console.log(Response.data))
+  }, [])
+
   return(
     <Container>
       <table>
