@@ -1,25 +1,10 @@
-import { useEffect, useState } from "react";
 import { Container } from "./styles";
-import { api } from './../../services/api';
+import { useTransactions } from "../../hooks/useTransactions";
 
-interface Transaction{
-  id: number,
-  title: string,
-  amount:number,
-  type: string,
-  category: string,
-  createdAt: string,
-}
+
 
 export function TransactionsTable(){
-  const [ transactions, setTransactions] = useState<Transaction[]>([])
-
-  useEffect(()=>{
-    api.get('/transactions')
-      //.then(response => response.json()) // utilizando axios não precisa mais fazer essa conversao
-      //.then(Response => console.log(Response.data))
-      .then(response => setTransactions(response.data.transactions))
-  }, [])
+  const {transactions} = useTransactions()
 
   return(
     <Container>
@@ -59,4 +44,8 @@ export function TransactionsTable(){
       </table>
     </Container>
   );
+}
+
+function TransactionContext(TransactionContext: any) {
+  throw new Error("Function not implemented.");
 }

@@ -72,8 +72,9 @@ export const RadioBox = styled.button<RadioBoxProps>`
   border-radius: 0.25rem;
 
   background: ${(props)=> props.activeColor
-    ? transparentize(0.9 , colors[props.activeColor]) 
+    ? transparentize(0.8 , colors[props.activeColor]) 
     : 'transparent'
+    
   };
 
   display: flex;
@@ -81,7 +82,6 @@ export const RadioBox = styled.button<RadioBoxProps>`
   justify-content:center;
 
   //transition:border-color .2s;
-
   &:hover{
     //border-color: #aaa ;
     border-color: ${darken(0.1, '#d7d7d7')} ;
