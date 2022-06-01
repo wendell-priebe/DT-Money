@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createServer, Model } from 'miragejs';
 import { App } from './App';
 
+// MirageJS API
 createServer({
   models:{
     transaction: Model,
@@ -10,7 +11,7 @@ createServer({
 
   seeds(server){
     server.db.loadData({
-      transactions:[
+      transactions:[ //nome do Model no plural
         {
           id:1,
           title: 'freelance de website',

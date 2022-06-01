@@ -1,14 +1,12 @@
-import { Summery } from "../Summary";
-import { TransactionsTable } from "../TransactionsTable";
+import { Summary } from "../Summary";
+import { TrasactionTable } from "../TransactionsTable";
 import { Container } from "./styles";
 
 export function Dashboard(){
-
-
-  return(
-    <Container>
-      <Summery /> 
-      <TransactionsTable />
-    </Container>
-  );
+    return(
+        <Container>
+            <Summary />
+            <TrasactionTable />
+        </Container>
+    )
 }

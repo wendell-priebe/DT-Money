@@ -1,22 +1,22 @@
-import logo from '../../assets/logo.svg'
-import { Container } from './styles'
-import { Content } from './styles'
+import logoImg from '../../assets/logo.svg';
+import { Container, Content } from './styles';
 
 interface HeaderProps {
-  onOpenNewTransactionModal: () => void; // void significa que não retorna nenhum parametro
+    openNewTransactionModal: () => void;
 }
 
-export function Header({onOpenNewTransactionModal}: HeaderProps){
+export function Header({ openNewTransactionModal }: HeaderProps) {
 
-  return(
-    <Container>
-      <Content>
-        <img src={logo} alt="dt money" />
-        <button type="button" onClick={onOpenNewTransactionModal}>
-          Nova transação
-        </button>
+    return (
+        <Container>
+            <Content>
+                <img src={ logoImg } alt="dt money" />
+                <button type="button" onClick={ openNewTransactionModal }>
+                    Nova transação
+                </button>
 
-      </Content>
-    </Container>
-  )
+            </Content>
+        </Container>
+
+    )
 }
